@@ -1,0 +1,54 @@
+body, html{
+    background-color: black;
+}
+
+.menu_div {
+    width: 97vw;
+    height: 97vh;
+    position: absolute;
+    top: 100vh;
+    color: white;
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.howtoplay_div {
+
+    height: 200px;
+    width: 800px;
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: 30px;
+
+
+
+}
+
+.difficulty_div {
+    width: 800px;
+    height: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.difficulty_div button {
+    font-size: 35px;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    
+}
+
+.sound_div {
+
+}
+
+.howtoplay_div, .difficulty_div, .sound_div {
+    /*background-color: red;*/
+}
+
