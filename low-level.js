@@ -175,9 +175,9 @@ function displayScore(){
 function endGame() {
     noLoop()
     background(0);
-    textSize(sizeOfEndTitle)
-    text(endGameText, endGameTitlePosition[0], endGameTitlePosition[1])
-    textSize(20)
+    textSize(canvasWidth/15)
+    text(endGameText, (canvasWidth/3) , canvasHeight/2)
+    textSize(canvasWidth/50)
     text('Press Enter to restart',(canvasWidth/2)-70, endGameTitlePosition[1] + 100 )
     // press enter to restart function is active
 

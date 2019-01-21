@@ -1,5 +1,9 @@
 $(".difficultyButton").on('click', function(e) {
+
+    $('.difficultyButton').removeClass('green');
+    $(e.currentTarget).addClass('green');
     
+
     switch($(e.currentTarget).val()) {
         case 'easy' : 
             loadEasyVariables();
@@ -23,3 +27,5 @@ $(".soundButton").on('click', function(e) {
             break 
     }
 })
+
+

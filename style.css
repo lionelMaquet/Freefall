@@ -15,15 +15,18 @@ body, html{
 }
 
 .howtoplay_div {
-
     height: 200px;
     width: 800px;
     margin-bottom: 100px;
     text-align: center;
-    font-size: 30px;
+}
 
+.howtoplay_div h2 {
+    font-size: 50px;
+}
 
-
+.howtoplay_div p{
+    font-size: 20px;
 }
 
 .difficulty_div {
@@ -44,11 +47,69 @@ body, html{
     
 }
 
-.sound_div {
 
-}
 
 .howtoplay_div, .difficulty_div, .sound_div {
     /*background-color: red;*/
 }
 
+.difficulty_div .green {
+    color: green;
+}
+
+
+@media only screen and (max-width : 828px) {
+
+    .howtoplay_div {
+        width : 500px;
+    }
+
+    .howtoplay_div h2 {
+        font-size: 30px;
+    }
+
+    .howtoplay_div p {
+        font-size: 15px;
+    }
+
+    .difficulty_div {
+        width: 500px;
+        height : 100px;
+    }
+
+    .difficulty_div button {
+        font-size: 30px;
+    }
+
+
+
+
+}
+
+@media only screen and (max-width : 528px) {
+
+    .howtoplay_div {
+        width : 300px;
+        height: 100px;
+    }
+
+    .howtoplay_div h2 {
+        font-size: 15px;
+    }
+
+    .howtoplay_div p {
+        font-size: 10px;
+    }
+
+    .difficulty_div {
+        width: 300px;
+    }
+
+    .difficulty_div button {
+        font-size: 15px;
+    }
+
+
+
+
+}
