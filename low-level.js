@@ -13,7 +13,6 @@ class obstacle {
         this.endAngle = (this.startAngle + (360 - wholeAngle)) % 360,
         this.passed = false;
         this.color = [255,255,255];
-        
     }
 
     display() {
@@ -123,9 +122,9 @@ function playerIsInHole(obstacle) {
     let playerAngle = Math.abs(360 + (playerCircle.angle % 360)) % 360 ;
 
     if ( (playerAngle > obstacle.endAngle &&
-          playerAngle < obstacle.endAngle + obstacle.wholeAngle) || 
-          //counted as hit when obstacle was for example between 352 and 372 while player was at 4 
-          (playerAngle < obstacle.startAngle && 
+          playerAngle < obstacle.endAngle + obstacle.wholeAngle) ||
+          //counted as hit when obstacle was for example between 352 and 372 while player was at 4
+          (playerAngle < obstacle.startAngle &&
           playerAngle > obstacle.startAngle - obstacle.wholeAngle)) {
 
             return true;
@@ -148,14 +147,16 @@ function detectHit() {
     for (let obstacleIndex = 0; obstacleIndex < arrayOfObstacles.length; obstacleIndex++) {
 
         let currObs = arrayOfObstacles[obstacleIndex];
-        
+
         if (obstacleIsInRange(currObs)) {
-            
+
                if (playerIsInHole(currObs)) {
 
                     if (currObs.passed == false) {
                         currObs.passed = true;
                         currObs.color = randomColor();
+
+
 
                         if (soundOn == true) {
                             mySound.play()
@@ -170,10 +171,10 @@ function detectHit() {
 
                     if (currObs.passed == false) {
                         return true
-                    }  
+                    }
 
                 }
-                
+
         }
 
     }
@@ -221,4 +222,3 @@ function resetGame() {
     score = 0;
     arrayOfObstacles = [];
 }
-

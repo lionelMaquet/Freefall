@@ -3,7 +3,7 @@ let timer = 0;
 let score = 0;
 
 
-// HANDLERS 
+// HANDLERS
 
 function obstacleHandler(){
     generateObstacles();
@@ -25,7 +25,7 @@ function collisionHandler() {
 
 function playGame() {
     timer++;
-    background(0); 
+    background(0);
     playerHandler();
     obstacleHandler();
     collisionHandler();
@@ -36,24 +36,23 @@ function playGame() {
 /*****************/
 
 function preload(){
-    mySound = loadSound('sound.mp3');
+    mySound = new Howl({
+  src: ['sound.mp3']
+});
 }
 
-function setup() { 
+function setup() {
     angleMode(DEGREES);
     createCanvas(canvasWidth,canvasHeight);
     background(backgroundColor);
     noFill();
     stroke(255);
     //loadHardVariables()
-    
 }
 
 function draw() {
 
     playGame()
     console.log(arrayOfObstacles.length)
-    
+
 }
-
-
