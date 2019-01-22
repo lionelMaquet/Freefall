@@ -1,3 +1,6 @@
+let gameIsOver = false;
+
+
 
 class obstacle {
 
@@ -32,6 +35,16 @@ function playerControls() {
     } else if (keyIsDown(RIGHT_ARROW)) {
         playerCircle.move('right');
     }
+
+    if (mouseIsPressed) {
+        if (mouseX > canvasWidth/2) {
+            playerCircle.move('right')
+        } else {
+            playerCircle.move('left')
+        }
+    }
+
+
 
 }
 
@@ -179,6 +192,7 @@ function endGame() {
     text(endGameText, (canvasWidth/3) , canvasHeight/2)
     textSize(canvasWidth/50)
     text('Press Enter to restart',(canvasWidth/2)-70, endGameTitlePosition[1] + 100 )
+    gameIsOver = true;
     // press enter to restart function is active
 
 }
@@ -189,6 +203,16 @@ function keyPressed() {
         loop();
     }
 }
+
+function mousePressed() {
+    if (gameIsOver) {
+        resetGame();
+        loop();
+        gameIsOver = false;
+    }
+}
+
+
 
 
 
