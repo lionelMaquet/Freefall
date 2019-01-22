@@ -1,0 +1,115 @@
+body, html{
+    background-color: black;
+}
+
+.menu_div {
+    width: 97vw;
+    height: 97vh;
+    position: absolute;
+    top: 100vh;
+    color: white;
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.howtoplay_div {
+    height: 200px;
+    width: 800px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.howtoplay_div h2 {
+    font-size: 50px;
+}
+
+.howtoplay_div p{
+    font-size: 20px;
+}
+
+.difficulty_div {
+    width: 800px;
+    height: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.difficulty_div button {
+    font-size: 35px;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    
+}
+
+
+
+.howtoplay_div, .difficulty_div, .sound_div {
+    /*background-color: red;*/
+}
+
+.difficulty_div .green {
+    color: green;
+}
+
+
+@media only screen and (max-width : 828px) {
+
+    .howtoplay_div {
+        width : 500px;
+    }
+
+    .howtoplay_div h2 {
+        font-size: 30px;
+    }
+
+    .howtoplay_div p {
+        font-size: 15px;
+    }
+
+    .difficulty_div {
+        width: 500px;
+        height : 100px;
+    }
+
+    .difficulty_div button {
+        font-size: 30px;
+    }
+
+
+
+
+}
+
+@media only screen and (max-width : 528px) {
+
+    .howtoplay_div {
+        width : 300px;
+        height: 100px;
+    }
+
+    .howtoplay_div h2 {
+        font-size: 15px;
+    }
+
+    .howtoplay_div p {
+        font-size: 10px;
+    }
+
+    .difficulty_div {
+        width: 300px;
+    }
+
+    .difficulty_div button {
+        font-size: 15px;
+    }
+
+
+
+
+}
