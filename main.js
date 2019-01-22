@@ -41,6 +41,8 @@ function preload(){
 });
 }
 
+p5.disableFriendlyErrors = true;
+
 function setup() {
     angleMode(DEGREES);
     createCanvas(canvasWidth,canvasHeight);
@@ -53,6 +55,9 @@ function setup() {
 function draw() {
 
     playGame()
-    console.log(arrayOfObstacles.length)
+    if (frameRate() < 30){
+      console.log('too slow')
+    }
+
 
 }
