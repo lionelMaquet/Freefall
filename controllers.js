@@ -4,7 +4,7 @@ let backgroundColor = 0; // default 0
 let scorePosition = [50,100]; // default [50,100]
 let referenceCircleRadius = 300; // default 300
 let sizeOfScore = 60; // default 60
-let sizeWhenRemoved = 2000; // default 2000
+let sizeWhenRemoved = canvasWidth + 50 ; // default 2000
 let playerCircleStartAngle = 90; // 0 = right, 180 = left // default 90
 let playerCircleRadius = 8; // default 15
 let sizeOfEndTitle = 150; // default 150
@@ -23,6 +23,7 @@ if (window.innerWidth < 668 || window.innerHeight < 750) {
     referenceCircleRadius = 100;
     defaultObstacleGrowRate = 1.5;
     playerCircleRadius = 3
+
 }
 
 
